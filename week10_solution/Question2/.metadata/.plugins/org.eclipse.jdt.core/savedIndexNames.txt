@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+D:\Full Stack Course\Course\5. JDBC & ORM\Week10\Week10_AssignmentSolution\Question2\.metadata\.plugins\org.eclipse.jdt.core
+1679038449.index
+3413270776.index
+1865797976.index
+122553149.index

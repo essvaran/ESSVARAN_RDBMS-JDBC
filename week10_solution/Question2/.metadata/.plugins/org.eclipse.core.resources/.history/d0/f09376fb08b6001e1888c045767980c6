@@ -1,0 +1,21 @@
+package com.solution;
+
+public class DbDriver {
+
+	public static void main(String[] args) {
+
+		//Creating an object for the service class
+//		DBOperationsService dbo = new DBOperationsService("jdbc:mysql://localhost:3306/GL", "root", "Sea@0071");
+		
+		int choice;
+		
+//		while(true)
+//		{
+//			System.out.println();
+//		}
+//	
+		String name = "Essvaran";
+		System.out.printf("%-10sName",name);
+	}
+
+}

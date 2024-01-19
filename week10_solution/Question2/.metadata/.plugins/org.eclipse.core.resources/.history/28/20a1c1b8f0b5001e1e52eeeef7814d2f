@@ -1,0 +1,20 @@
+package com.solution;
+
+public class DbDriver {
+
+	public static void main(String[] args) {
+
+		//Creating an object
+		DBOperationsService dbo = new DBOperationsService("jdbc:mysql://localhost:3306/GL", "root", "Sea@0071");
+		/*
+		//Calling the addEmployee method to insert details of 5 employee
+		dbo.addEmployee();
+		//Display all the records of employee in the database
+		dbo.displayAll();
+		*/
+		//Modify Email_Id column to varchar(30) NOT NULL.
+		dbo.alterColumn("email_id","varchar(30) not null");
+		
+	}
+
+}

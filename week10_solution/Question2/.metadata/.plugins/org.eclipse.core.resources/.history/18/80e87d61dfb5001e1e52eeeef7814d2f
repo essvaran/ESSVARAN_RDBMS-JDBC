@@ -1,0 +1,54 @@
+package com.solution;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DBOperationsService {
+
+	private Connection connection ;
+	private Statement statement;
+	private ResultSet rs;
+	Scanner sc = new Scanner(System.in);
+	
+	private ArrayList<Employee> employess;
+
+	//Constructor to establish connection
+	public DBOperationsService(String url,String uname,String pw)
+	{
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			connection = DriverManager.getConnection(url,uname,pw);
+			statement = connection.createStatement();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Connected successfully...");
+	}
+	
+	//To close the connection and the statement object
+	public void disconnect()
+	{
+		try {
+			statement.close();
+			connection.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void addEmployee()
+	{
+		System.out.print("Enter number of records you want to insert  : ");
+		int count = sc.nextInt();
+	}
+}
